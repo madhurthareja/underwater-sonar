@@ -104,7 +104,7 @@ class YOLOEvaluator:
             
             # Class-wise AP
             if hasattr(results.box, 'ap'):
-                ap_per_class = results.box.ap[:, 0]  # AP@0.5
+                ap_per_class = results.box.ap  # Already 1D: AP@0.5 for each class
                 
                 logger.info(f"=== CLASS-WISE PERFORMANCE ({split.upper()}) ===")
                 for i, (class_name, ap) in enumerate(zip(class_names, ap_per_class)):

@@ -1,0 +1,14 @@
+YOLOv11 UATD Sonar Dataset Evaluation Report
+==================================================
+Generated: 2025-07-03 22:02:46
+Model: runs_train/uatd_sonar_exp/weights/best.pt
+Dataset: /home/madhurthareja/underwater-sonar/dataset/data.yaml
+
+TEST SET RESULTS:
+--------------------
+mAP@0.5: 0.9950
+mAP@0.5:0.95: 0.9950
+Precision: 1.0000
+Recall: 1.0000
+F1-Score: 1.0000
+

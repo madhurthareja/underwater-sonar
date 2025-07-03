@@ -1,0 +1,50 @@
+{
+  "os": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-07-03T13:13:51.794850Z",
+  "args": [
+    "--config",
+    "/home/madhurthareja/sonar/configs/custom_yolo11_sonar_training.yaml",
+    "--epochs",
+    "100",
+    "--batch",
+    "4"
+  ],
+  "program": "/home/madhurthareja/underwater-sonar/models/train_yolo.py",
+  "codePath": "models/train_yolo.py",
+  "git": {
+    "remote": "https://github.com/madhurthareja/underwater-sonar.git",
+    "commit": "3055a3feaa147fe1e383891ed9ac4fc9e33ca45d"
+  },
+  "email": "madhurthareja1105@gmail.com",
+  "root": "/home/madhurthareja/underwater-sonar/models",
+  "host": "itachi",
+  "executable": "/usr/bin/python3",
+  "codePathLocal": "train_yolo.py",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce RTX 3050",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1081101176832",
+      "used": "78000652288"
+    }
+  },
+  "memory": {
+    "total": "8240992256"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3050",
+      "memoryTotal": "6442450944",
+      "architecture": "Ampere",
+      "uuid": "GPU-5e1ad103-17b7-fe71-9627-3830de8f8a9b"
+    }
+  ],
+  "cudaVersion": "12.9"
+}

@@ -1,0 +1,26 @@
+{"time":"2025-07-03T18:43:51.799744632+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/madhurthareja/underwater-sonar/models/wandb/run-20250703_184351-s8qv2y5w/logs/debug-core.log"}
+{"time":"2025-07-03T18:43:52.279989307+05:30","level":"INFO","msg":"stream: created new stream","id":"s8qv2y5w"}
+{"time":"2025-07-03T18:43:52.280024639+05:30","level":"INFO","msg":"stream: started","id":"s8qv2y5w"}
+{"time":"2025-07-03T18:43:52.280086206+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"s8qv2y5w"}
+{"time":"2025-07-03T18:43:52.280180899+05:30","level":"INFO","msg":"sender: started","stream_id":"s8qv2y5w"}
+{"time":"2025-07-03T18:43:52.280204733+05:30","level":"INFO","msg":"handler: started","stream_id":"s8qv2y5w"}
+{"time":"2025-07-03T18:43:52.863290196+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-03T19:09:17.396567883+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/madhurthareja1105-bits-pilani/runs_train/s8qv2y5w/file_stream\": local error: tls: bad record MAC"}
+{"time":"2025-07-03T19:21:36.864512706+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:22:08.949755107+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:22:43.072326221+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:23:20.713659118+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:24:06.813627592+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:25:09.651576826+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-03T19:26:39.655340813+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:28:09.659533597+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:29:39.664035943+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:31:03.890182388+05:30","level":"WARN","msg":"sender: taking a long time","seconds":600.000837563,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true mailbox_slot:\"1coldenlygv3\" connection_id:\"127.0.0.1:39004\")"}
+{"time":"2025-07-03T19:31:09.667338588+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:31:09.72363984+05:30","level":"WARN","msg":"runwork: taking a long time","seconds":600.001136049,"work":"WorkRecord(*service_go_proto.Record_OutputRaw); Control(connection_id:\"127.0.0.1:39004\")"}
+{"time":"2025-07-03T19:31:18.582874319+05:30","level":"WARN","msg":"runwork: taking a long time","seconds":600.000704449,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-03T19:31:18.58478585+05:30","level":"WARN","msg":"runwork: taking a long time","seconds":600.000334011,"work":"WorkRecord(*service_go_proto.Record_Stats); Control(always_send:true)"}
+{"time":"2025-07-03T19:32:39.670864009+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-03T19:34:09.673068282+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-03T19:35:39.67583566+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-03T19:37:04.653810305+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 172.30.42.66:58568->35.186.228.49:443: read: connection timed out"}

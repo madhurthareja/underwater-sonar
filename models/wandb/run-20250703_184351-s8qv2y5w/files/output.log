@@ -1,0 +1,83 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+/home/madhurthareja/.local/lib/python3.10/site-packages/ultralytics/nn/tasks.py:714: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(file, map_location="cpu")
+/home/madhurthareja/.local/lib/python3.10/site-packages/ultralytics/utils/checks.py:639: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(True):
+[34m[1mAMP: [0mchecks passed ✅
+/home/madhurthareja/.local/lib/python3.10/site-packages/ultralytics/engine/trainer.py:276: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(enabled=self.amp)
+[34m[1mtrain: [0mScanning /home/madhurthareja/underwater-sonar/dataset/UATD_Training/labels... 7595 images, 5 backgrounds, 0 corrupt: 100%|██████████| 7600/7600 [00:04<00:00, 17[0m
+[34m[1mtrain: [0mNew cache created: /home/madhurthareja/underwater-sonar/dataset/UATD_Training/labels.cache
+/home/madhurthareja/.local/lib/python3.10/site-packages/ultralytics/data/augment.py:846: UserWarning: Argument(s) 'quality_lower' are not valid for transform ImageCompression
+  A.ImageCompression(quality_lower=75, p=0.0),
+/home/madhurthareja/.local/lib/python3.10/site-packages/albumentations/core/composition.py:331: UserWarning: Got processor for bboxes, but no transform to process it.
+  self._set_keys()
+[34m[1malbumentations: [0mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01, method='weighted_average', num_output_channels=3), CLAHE(p=0.01, clip_limit=(1.0, 4.0), tile_grid_size=(8, 8))
+[34m[1mval: [0mScanning /home/madhurthareja/underwater-sonar/dataset/UATD_Test_1/labels... 799 images, 1 backgrounds, 0 corrupt: 100%|██████████| 800/800 [00:00<00:00, 1595.83it[0m
+[34m[1mval: [0mNew cache created: /home/madhurthareja/underwater-sonar/dataset/UATD_Test_1/labels.cache
+Plotting labels to runs_train/uatd_sonar_exp/labels.jpg...
+[34m[1moptimizer:[0m AdamW(lr=0.01, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 640 train, 640 val
+Using 4 dataloader workers
+Logging results to [1mruns_train/uatd_sonar_exp[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      1/100      0.69G      2.173       2.13      1.322          6        640: 100%|██████████| 1900/1900 [02:37<00:00, 12.05it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:07<00:00, 13.65it/s]
+                   all        800       1170      0.506       0.54      0.522      0.207
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      2/100     0.713G      2.071       1.65      1.271          9        640: 100%|██████████| 1900/1900 [02:30<00:00, 12.65it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 15.93it/s]
+                   all        800       1170      0.468      0.516       0.48      0.181
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      3/100     0.713G      2.005      1.552      1.246         18        640: 100%|██████████| 1900/1900 [02:28<00:00, 12.75it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 16.06it/s]
+                   all        800       1170      0.599       0.62      0.661       0.24
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      4/100     0.711G      1.929      1.401      1.217         11        640: 100%|██████████| 1900/1900 [02:28<00:00, 12.81it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 15.67it/s]
+                   all        800       1170      0.732      0.561      0.663      0.261
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      5/100     0.713G      1.903      1.333      1.211         14        640: 100%|██████████| 1900/1900 [02:26<00:00, 12.95it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 15.57it/s]
+                   all        800       1170      0.578      0.538      0.576      0.205
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      6/100     0.713G      1.877      1.255      1.199          9        640: 100%|██████████| 1900/1900 [02:25<00:00, 13.04it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 15.48it/s]
+                   all        800       1170      0.722      0.621       0.68      0.288
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      7/100     0.713G      1.828      1.212      1.172          9        640: 100%|██████████| 1900/1900 [02:26<00:00, 12.94it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:05<00:00, 18.24it/s]
+                   all        800       1170      0.775      0.658      0.724      0.287
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      8/100     0.713G       1.82      1.181      1.174         11        640: 100%|██████████| 1900/1900 [02:28<00:00, 12.82it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:05<00:00, 18.71it/s]
+                   all        800       1170       0.69      0.701      0.731      0.297
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      9/100     0.713G      1.792       1.14      1.161         10        640: 100%|██████████| 1900/1900 [02:27<00:00, 12.86it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 16.02it/s]
+                   all        800       1170      0.726      0.681      0.728      0.272
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     10/100     0.711G      1.793      1.118      1.163         12        640: 100%|██████████| 1900/1900 [02:28<00:00, 12.81it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 15.31it/s]
+                   all        800       1170      0.754      0.737      0.758      0.325
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     11/100     0.713G      1.765      1.095      1.147         11        640: 100%|██████████| 1900/1900 [02:29<00:00, 12.74it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 100/100 [00:06<00:00, 15.29it/s]
+                   all        800       1170      0.795       0.75      0.792      0.324
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     12/100     0.713G      1.742      1.077      1.135          7        640:  23%|██▎       | 434/1900 [08:31<13:46,  1.77it/s]   

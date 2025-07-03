@@ -31,8 +31,8 @@ class YOLOTrainer:
                 config = yaml.safe_load(f)
         else:
             config = {
-                'model_size': '/home/madhurthareja/sonar/yolo11n.pt',  
-                'data_yaml': '/home/madhurthareja/sonar/dataset/data.yaml',
+                'model_size': 'yolov8n.pt',  
+                'data_yaml': '/home/madhurthareja/underwater-sonar/dataset/data.yaml',
                 'epochs': 100,
                 'batch_size': 4,  
                 'image_size': 640,
@@ -67,7 +67,7 @@ class YOLOTrainer:
                 'auto_augment': 'randaugment',
                 'erasing': 0.4,
                 'crop_fraction': 1.0,
-                'project': 'runs/train',
+                'project': 'runs_train',
                 'name': 'uatd_sonar_exp',
                 'exist_ok': True,
                 'pretrained': True,
@@ -137,7 +137,7 @@ class YOLOTrainer:
         """Initialize YOLO model"""
         print("Config:", self.config)  # Debug line
 
-        model_path = self.config.get('model_size', 'yolo11n.pt')  # Fallback to default if missing
+        model_path = self.config.get('model_size', 'yolov8n.pt')  # Fallback to default if missing
     
         if not os.path.exists(model_path):
             logger.info(f"Downloading pretrained model: {model_path}")

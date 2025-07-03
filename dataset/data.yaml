@@ -1,0 +1,6 @@
+train: /home/madhurthareja/sonar/dataset/UATD_Training/images
+val: /home/madhurthareja/sonar/dataset/UATD_Test_1/images
+test: /home/madhurthareja/sonar/dataset/UATD_Test_2/images
+
+nc: 11
+names: ['human body', 'ball', 'cube', 'cylinder', 'model', 'tyre', 'circle cage', 'square cage', 'metal bucket', 'plane', 'rov']

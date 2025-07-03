@@ -1,0 +1,6 @@
+dataset/UATD_Test_1/
+dataset/UATD_Test_2/
+dataset/UATD_Training/
+venv/
+
+*.zip

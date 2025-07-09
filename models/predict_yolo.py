@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-YOLOv11 Inference Script for UATD Sonar Dataset
+YOLOv8n Inference Script for UATD Sonar Dataset
 """
 
 import torch
@@ -147,7 +147,7 @@ class YOLOPredictor:
         plt.figure(figsize=(12, 8))
         plt.imshow(cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB))
         plt.axis('off')
-        plt.title('YOLOv11 Predictions')
+        plt.title('YOLOv8n Predictions')
         
         if save_path:
             plt.savefig(save_path, dpi=300, bbox_inches='tight')
@@ -259,7 +259,7 @@ class YOLOPredictor:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='YOLOv11 Inference for UATD Sonar Dataset')
+    parser = argparse.ArgumentParser(description='YOLOv8n Inference for UATD Sonar Dataset')
     parser.add_argument('--model', type=str, required=True, help='Path to trained model')
     parser.add_argument('--source', type=str, required=True, help='Source: image/video/dir/webcam')
     parser.add_argument('--output', type=str, help='Output directory')

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-YOLOv11 Training Script for UATD Sonar Dataset
+YOLOv8n Training Script for UATD Sonar Dataset
 """
 
 import torch
@@ -166,7 +166,7 @@ class YOLOTrainer:
             print(f"DEBUG: Dataset verification failed: {e}")
             raise
         
-        logger.info("Starting YOLOv11 training...")
+        logger.info("Starting YOLOv8 training...")
         logger.info(f"Configuration: {self.config}")
         
         try:
@@ -252,7 +252,7 @@ class YOLOTrainer:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Train YOLOv11 on UATD Sonar Dataset')
+    parser = argparse.ArgumentParser(description='Train YOLOv8n on UATD Sonar Dataset')
     parser.add_argument('--config', type=str, help='Path to config file')
     parser.add_argument('--data', type=str, help='Path to dataset YAML file')
     parser.add_argument('--epochs', type=int, default=100, help='Number of epochs')

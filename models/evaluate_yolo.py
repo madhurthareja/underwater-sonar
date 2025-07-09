@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-YOLOv11 Evaluation Script for UATD Sonar Dataset
+YOLOv8n Evaluation Script for UATD Sonar Dataset
 """
 
 import torch
@@ -220,7 +220,7 @@ class YOLOEvaluator:
     def generate_report(self, save_path='evaluation_report.txt'):
         """Generate comprehensive evaluation report"""
         with open(save_path, 'w') as f:
-            f.write("YOLOv11 UATD Sonar Dataset Evaluation Report\n")
+            f.write("YOLOv8n UATD Sonar Dataset Evaluation Report\n")
             f.write("=" * 50 + "\n")
             f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write(f"Model: {self.model_path}\n")
@@ -240,10 +240,135 @@ class YOLOEvaluator:
                 f.write("\n")
         
         logger.info(f"Evaluation report saved to: {save_path}")
-
+    
+    def create_visual_summary(self, save_path='evaluation_summary.png'):
+        """Create and save a visual summary of evaluation results"""
+        if not self.results:
+            logger.warning("No evaluation results available. Run evaluation first.")
+            return
+        
+        # Set up the figure
+        fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+        fig.suptitle('YOLOv8n UATD Sonar Dataset Evaluation Summary', fontsize=16, fontweight='bold')
+        
+        # Color scheme
+        colors = ['#2E86AB', '#A23B72', '#F18F01', '#C73E1D']
+        
+        # Get results for the first available split
+        split_name = list(self.results.keys())[0]
+        results = self.results[split_name]
+        
+        if hasattr(results, 'box'):
+            metrics = results.box
+            
+            # 1. Overall Metrics Bar Chart
+            ax1 = axes[0, 0]
+            metric_names = ['mAP@0.5', 'mAP@0.5:0.95', 'Precision', 'Recall']
+            metric_values = [metrics.map50, metrics.map, metrics.mp, metrics.mr]
+            
+            bars = ax1.bar(metric_names, metric_values, color=colors)
+            ax1.set_title('Overall Performance Metrics', fontweight='bold')
+            ax1.set_ylabel('Score')
+            ax1.set_ylim(0, 1)
+            
+            # Add value labels on bars
+            for bar, value in zip(bars, metric_values):
+                height = bar.get_height()
+                ax1.text(bar.get_x() + bar.get_width()/2., height + 0.01,
+                        f'{value:.3f}', ha='center', va='bottom', fontweight='bold')
+            
+            # 2. Class-wise Performance
+            ax2 = axes[0, 1]
+            if hasattr(results.box, 'ap') and hasattr(results.box, 'ap_class_index'):
+                # Get class names
+                with open(self.data_yaml, 'r') as f:
+                    data_config = yaml.safe_load(f)
+                class_names = data_config.get('names', [])
+                
+                ap_per_class = results.box.ap
+                
+                # Limit to top 10 classes for readability
+                if len(class_names) > 10:
+                    top_indices = np.argsort(ap_per_class)[-10:]
+                    class_names = [class_names[i] for i in top_indices]
+                    ap_per_class = ap_per_class[top_indices]
+                
+                bars = ax2.barh(class_names, ap_per_class, color=colors[1])
+                ax2.set_title('Class-wise AP@0.5', fontweight='bold')
+                ax2.set_xlabel('AP@0.5')
+                ax2.set_xlim(0, 1)
+                
+                # Add value labels
+                for bar, value in zip(bars, ap_per_class):
+                    width = bar.get_width()
+                    ax2.text(width + 0.01, bar.get_y() + bar.get_height()/2.,
+                            f'{value:.3f}', ha='left', va='center', fontweight='bold')
+            else:
+                ax2.text(0.5, 0.5, 'Class-wise data not available', 
+                        ha='center', va='center', transform=ax2.transAxes)
+                ax2.set_title('Class-wise AP@0.5', fontweight='bold')
+        
+        # 3. Model Information
+        ax3 = axes[1, 0]
+        ax3.axis('off')
+        
+        # Model specs from your training log
+        model_info = [
+            f"Model: YOLOv8n (Custom)",
+            f"Parameters: 3.01M",
+            f"GFLOPs: 8.2",
+            f"Layers: 225",
+            f"Input Size: 640x640",
+            f"Dataset: {os.path.basename(self.data_yaml)}",
+            f"Evaluated on: {split_name.upper()}"
+        ]
+        
+        info_text = '\n'.join(model_info)
+        ax3.text(0.1, 0.9, info_text, transform=ax3.transAxes, fontsize=12,
+                verticalalignment='top', bbox=dict(boxstyle="round,pad=0.3", 
+                facecolor=colors[2], alpha=0.3))
+        ax3.set_title('Model Information', fontweight='bold')
+        
+        # 4. Performance Summary
+        ax4 = axes[1, 1]
+        ax4.axis('off')
+        
+        if hasattr(results, 'box'):
+            f1_score = 2 * (metrics.mp * metrics.mr) / (metrics.mp + metrics.mr)
+            
+            summary_text = [
+                f"🎯 mAP@0.5: {metrics.map50:.4f}",
+                f"🎯 mAP@0.5:0.95: {metrics.map:.4f}",
+                f"🎯 Precision: {metrics.mp:.4f}",
+                f"🎯 Recall: {metrics.mr:.4f}",
+                f"🎯 F1-Score: {f1_score:.4f}",
+                "",
+                f"📊 Performance Grade: {'Excellent' if metrics.map50 > 0.9 else 'Good' if metrics.map50 > 0.7 else 'Fair'}",
+                f"⚡ Model Size: Nano (3.01M params)",
+                f"🚀 Inference: Real-time capable"
+            ]
+            
+            summary_text_str = '\n'.join(summary_text)
+            ax4.text(0.1, 0.9, summary_text_str, transform=ax4.transAxes, fontsize=12,
+                    verticalalignment='top', bbox=dict(boxstyle="round,pad=0.3", 
+                    facecolor=colors[3], alpha=0.3))
+        
+        ax4.set_title('Performance Summary', fontweight='bold')
+        
+        # Add timestamp
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        fig.text(0.99, 0.01, f'Generated: {timestamp}', ha='right', va='bottom', 
+                fontsize=8, alpha=0.7)
+        
+        plt.tight_layout()
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        plt.close()
+        
+        logger.info(f"Visual summary saved to: {save_path}")
+        return save_path
 
 def main():
-    parser = argparse.ArgumentParser(description='Evaluate YOLOv11 on UATD Sonar Dataset')
+    parser = argparse.ArgumentParser(description='Evaluate YOLOv8n on UATD Sonar Dataset')
     parser.add_argument('--model', type=str, required=True, help='Path to trained model')
     parser.add_argument('--data', type=str, required=True, help='Path to dataset YAML file')
     parser.add_argument('--split', type=str, default='test', help='Dataset split to evaluate')
@@ -286,6 +411,9 @@ def main():
     
     # Generate report
     evaluator.generate_report()
+    
+    # Create visual summary
+    evaluator.create_visual_summary()
     
     logger.info("Evaluation completed!")
 

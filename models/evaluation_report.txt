@@ -1,6 +1,6 @@
-YOLOv11 UATD Sonar Dataset Evaluation Report
+YOLOv8n UATD Sonar Dataset Evaluation Report
 ==================================================
-Generated: 2025-07-03 22:02:46
+Generated: 2025-07-09 08:47:34
 Model: runs_train/uatd_sonar_exp/weights/best.pt
 Dataset: /home/madhurthareja/underwater-sonar/dataset/data.yaml
 

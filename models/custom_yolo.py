@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-YOLOv11 Model Architecture Customization
+YOLOv8n Model Architecture Customization
 For advanced training modifications
 """
 
@@ -16,8 +16,8 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class CustomYOLOv11(nn.Module):
-    """Custom YOLOv11 architecture for sonar image detection"""
+class CustomYOLOv8n(nn.Module):
+    """Custom YOLOv8n architecture for sonar image detection"""
     
     def __init__(self, cfg_path=None, nc=10, anchors=None):
         super().__init__()
@@ -267,7 +267,7 @@ def clone_ultralytics_repo(repo_dir='ultralytics_repo'):
         return True
 
 
-def create_custom_model_config(save_path='configs/custom_yolo11_sonar.yaml'):
+def create_custom_model_config(save_path='configs/custom_yolo8n_sonar.yaml'):
     """Create custom model configuration file"""
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     
@@ -280,7 +280,7 @@ def create_custom_model_config(save_path='configs/custom_yolo11_sonar.yaml'):
         # Anchors (will be auto-calculated if None)
         'anchors': None,
         
-        # YOLOv11n backbone
+        # YOLOv8n backbone
         'backbone': [
             # [from, repeats, module, args]
             [-1, 1, 'Conv', [64, 3, 2]],  # 0-P1/2
@@ -295,7 +295,7 @@ def create_custom_model_config(save_path='configs/custom_yolo11_sonar.yaml'):
             [-1, 1, 'SPPF', [1024, 5]],  # 9
         ],
         
-        # YOLOv11n head
+        # YOLOv8nn head
         'head': [
             [-1, 1, 'nn.Upsample', [None, 2, 'nearest']],
             [[-1, 6], 1, 'Concat', [1]],  # cat backbone P4
@@ -328,10 +328,10 @@ def main():
     """Main function for model customization"""
     import argparse
     
-    parser = argparse.ArgumentParser(description='YOLOv11 Model Customization')
+    parser = argparse.ArgumentParser(description='YOLOv8n Model Customization')
     parser.add_argument('--clone-repo', action='store_true', help='Clone Ultralytics repository')
     parser.add_argument('--create-config', action='store_true', help='Create custom model config')
-    parser.add_argument('--config-path', type=str, default='../configs/custom_yolo11_sonar.yaml', help='Config save path')
+    parser.add_argument('--config-path', type=str, default='../configs/custom_yolo8n_sonar.yaml', help='Config save path')
     
     args = parser.parse_args()
     

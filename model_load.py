@@ -1,2 +1,2 @@
 from ultralytics import YOLO
-model = YOLO('yolo11n.pt')  # auto-downloads nano weights
+model = YOLO('yolov8n.pt')  # auto-downloads nano weights

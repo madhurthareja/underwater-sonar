@@ -1,0 +1,8 @@
+{"time":"2025-07-17T14:20:20.960995784+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/madhurthareja/underwater-sonar/wandb/run-20250717_142020-j14cg36l/logs/debug-core.log"}
+{"time":"2025-07-17T14:20:21.41216091+05:30","level":"INFO","msg":"stream: created new stream","id":"j14cg36l"}
+{"time":"2025-07-17T14:20:21.412192725+05:30","level":"INFO","msg":"stream: started","id":"j14cg36l"}
+{"time":"2025-07-17T14:20:21.412201908+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"j14cg36l"}
+{"time":"2025-07-17T14:20:21.412269203+05:30","level":"INFO","msg":"sender: started","stream_id":"j14cg36l"}
+{"time":"2025-07-17T14:20:21.412261714+05:30","level":"INFO","msg":"handler: started","stream_id":"j14cg36l"}
+{"time":"2025-07-17T14:20:21.90303697+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-17T15:16:13.350141426+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/madhurthareja1105-bits-pilani/runs_train/j14cg36l/file_stream\": local error: tls: bad record MAC"}

@@ -1,0 +1,16 @@
+names:
+- human body
+- ball
+- cube
+- cylinder
+- model
+- tyre
+- circle cage
+- square cage
+- metal bucket
+- plane
+- rov
+nc: 11
+test: /home/madhurthareja/underwater-sonar/dataset_clean/test/images
+train: /home/madhurthareja/underwater-sonar/dataset_clean/train/images
+val: /home/madhurthareja/underwater-sonar/dataset_clean/val/images

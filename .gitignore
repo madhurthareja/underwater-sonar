@@ -3,4 +3,7 @@ dataset/UATD_Test_2/
 dataset/UATD_Training/
 venv/
 
+dataset_clean/train/
+dataset_clean/test/
+dataset_clean/val/
 *.zip

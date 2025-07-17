@@ -1,0 +1,46 @@
+COMPREHENSIVE DATA LEAKAGE ANALYSIS REPORT
+============================================================
+
+SUMMARY:
+--------------------
+total_identical_images: 20
+total_similar_images: 0
+total_filename_patterns: 0
+total_identical_annotations: 3
+total_directory_issues: 0
+leakage_detected: True
+
+🚨 LEAKAGE DETECTED: YES
+
+IDENTICAL IMAGES:
+----------------
+1. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/06591.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/05823.bmp', 'split1': 'train', 'split2': 'train', 'hash': 'fc22427cda2b13a7a9ec611a5c3aef43'}
+2. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03532.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03546.bmp', 'split1': 'train', 'split2': 'train', 'hash': 'd4df988d60e73d776a966281e6299608'}
+3. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/06160.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/07148.bmp', 'split1': 'train', 'split2': 'train', 'hash': 'ada3d2934014177023b388650dded8e2'}
+4. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/01730.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/01739.bmp', 'split1': 'train', 'split2': 'train', 'hash': '510e76d6b3e5fdc4432d1fe0a783fe83'}
+5. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03522.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03516.bmp', 'split1': 'train', 'split2': 'train', 'hash': '9d11194ef3cfabbd9e8a56f30458d923'}
+6. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03535.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/05635.bmp', 'split1': 'train', 'split2': 'train', 'hash': 'db66f713048624251bb1a1afeb8902be'}
+7. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/06755.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/06608.bmp', 'split1': 'train', 'split2': 'train', 'hash': 'eb985b141a791165d8c77ddf2908d6f0'}
+8. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03528.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03545.bmp', 'split1': 'train', 'split2': 'train', 'hash': '3f103af4281a2dae96c6b842b9c4ec0c'}
+9. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03562.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/03555.bmp', 'split1': 'train', 'split2': 'train', 'hash': '02c92a158f462f0bfbefae2da084a26a'}
+10. {'image1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/00973.bmp', 'image2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/images/00963.bmp', 'split1': 'train', 'split2': 'train', 'hash': '7fb1f79965af4290acf051a7ce9a24f9'}
+... and 10 more
+
+SIMILAR IMAGES:
+--------------
+None found.
+
+FILENAME PATTERNS:
+-----------------
+None found.
+
+IDENTICAL ANNOTATIONS:
+---------------------
+1. {'annotation1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/labels/05322.txt', 'annotation2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/labels/05323.txt', 'split1': 'train', 'split2': 'train', 'content': '10 0.335938 0.772474 0.066406 0.030231'}
+2. {'annotation1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/labels/01883.txt', 'annotation2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Test_2/labels/00142.txt', 'split1': 'train', 'split2': 'test', 'content': '2 0.477539 0.571637 0.056641 0.038012'}
+3. {'annotation1': '/home/madhurthareja/underwater-sonar/dataset/UATD_Training/labels/04252.txt', 'annotation2': '/home/madhurthareja/underwater-sonar/dataset/UATD_Test_2/labels/00630.txt', 'split1': 'train', 'split2': 'test', 'content': '9 0.574219 0.798142 0.171875 0.039977'}
+
+DIRECTORY ISSUES:
+----------------
+None found.
+

@@ -1,0 +1,14 @@
+{
+  "os": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-07-30T05:23:25.932881Z",
+  "program": "<python with no main file>",
+  "git": {
+    "remote": "git@github.com:madhurthareja/underwater-sonar.git",
+    "commit": "f8eb2df66b8dd91dfdb99410423dcc70a7cef006"
+  },
+  "email": "madhurthareja1105@gmail.com",
+  "root": "/home/madhurthareja/underwater-sonar/model_comparison",
+  "host": "itachi",
+  "executable": "/usr/bin/python3"
+}

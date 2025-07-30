@@ -7,3 +7,20 @@ dataset_clean/train/
 dataset_clean/test/
 dataset_clean/val/
 *.zip
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Experiment results
+*/weights/
+*/runs/
+*/wandb/
+model_comparison/results/*/weights/
+model_comparison/weights/
+
+# Python cache
+__pycache__/
+*.pyc

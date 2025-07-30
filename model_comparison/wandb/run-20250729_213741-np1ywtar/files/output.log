@@ -1,0 +1,18 @@
+ERROR:frcnn.frcnn_model:Additional evaluation metrics calculation failed: operands could not be broadcast together with shapes (1422,) (2402,)
+Traceback (most recent call last):
+  File "/home/madhurthareja/underwater-sonar/model_comparison/frcnn/frcnn_model.py", line 342, in evaluate
+    precision, recall, _ = precision_recall_curve(np.array(all_true)==np.array(all_pred), all_scores)
+ValueError: operands could not be broadcast together with shapes (1422,) (2402,)
+INFO:__main__:Saved frcnn results to /home/madhurthareja/underwater-sonar/model_comparison/results/frcnn_results.json
+✓ FRCNN completed: mAP@0.5 = 0.9667
+\n============================================================
+FINAL COMPARISON RESULTS
+============================================================
+Model  mAP@0.5  mAP@0.5:0.95  Precision  Recall  F1-Score  Inference_Time_ms  Model_Size_MB
+FRCNN   0.9667        0.6767     0.9461  0.9873    0.9663           299.2251       158.1446
+\nResults saved to: /home/madhurthareja/underwater-sonar/model_comparison/results/model_comparison.csv
+All results saved to: /home/madhurthareja/underwater-sonar/model_comparison/results/all_results.json
+\n🏆 BEST PERFORMING MODEL: FRCNN
+   mAP@0.5: 0.9667
+   F1-Score: 0.9663
+   Efficiency: 0.0061 mAP/MB

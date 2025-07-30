@@ -1,0 +1,1 @@
+{"batch":6,"epoch":0,"_step":6,"_timestamp":1.753853528546268e+09,"batch_cls_loss":1.221215844154358,"batch_bbox_loss":0.4843354821205139,"_runtime":49.039256777,"batch_loss":1.7055513858795166,"_wandb":{"runtime":53}}

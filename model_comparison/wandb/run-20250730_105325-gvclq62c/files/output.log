@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 159, in train
+    train_dataset = SonarDataset(data_yaml, 'train')
+  File "/home/madhurthareja/underwater-sonar/model_comparison/frcnn/frcnn_model.py", line 27, in __init__
+    with open(data_yaml, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data_clean.yaml'
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 159, in train
+    train_dataset = SonarDataset(data_yaml, 'train')
+  File "/home/madhurthareja/underwater-sonar/model_comparison/frcnn/frcnn_model.py", line 27, in __init__
+    with open(data_yaml, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data_clean.yaml'

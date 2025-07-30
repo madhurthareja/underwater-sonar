@@ -1,0 +1,26 @@
+architecture_notes:
+- Based on YOLOv8n architecture
+- Optimized hyperparameters for sonar imagery
+- Enhanced box loss for precise underwater object localization
+- Reduced augmentations to preserve sonar image characteristics
+augmentations:
+  degrees: 8
+  fliplr: 0.5
+  flipud: 0.0
+  hsv_h: 0.01
+  hsv_s: 0.2
+  hsv_v: 0.3
+  mixup: 0.0
+  mosaic: 0.8
+  perspective: 0.0
+  scale: 0.3
+  shear: 0.0
+  translate: 0.08
+box_loss_gain: 7.5
+cls_loss_gain: 0.5
+description: YOLOv8 variant optimized for underwater/sonar imagery
+dfl_loss_gain: 1.5
+lr0: 0.008
+model_type: AquaYOLO
+momentum: 0.95
+weight_decay: 0.0008

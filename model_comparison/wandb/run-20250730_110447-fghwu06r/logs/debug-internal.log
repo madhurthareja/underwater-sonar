@@ -1,0 +1,16 @@
+{"time":"2025-07-30T11:04:48.20945816+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/madhurthareja/underwater-sonar/model_comparison/wandb/run-20250730_110447-fghwu06r/logs/debug-core.log"}
+{"time":"2025-07-30T11:04:48.661785165+05:30","level":"INFO","msg":"stream: created new stream","id":"fghwu06r"}
+{"time":"2025-07-30T11:04:48.661829912+05:30","level":"INFO","msg":"stream: started","id":"fghwu06r"}
+{"time":"2025-07-30T11:04:48.661876096+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"fghwu06r"}
+{"time":"2025-07-30T11:04:48.661900343+05:30","level":"INFO","msg":"sender: started","stream_id":"fghwu06r"}
+{"time":"2025-07-30T11:04:48.661930628+05:30","level":"INFO","msg":"handler: started","stream_id":"fghwu06r"}
+{"time":"2025-07-30T11:04:49.130834362+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-30T12:00:43.846932526+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-30T12:00:43.848201182+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-30T12:00:44.856864258+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact retinanet-model","runtime_seconds":1.010041155},{"desc":"uploading output.log","runtime_seconds":0.644315683,"progress":"193.6KB/193.6KB"},{"desc":"uploading config.yaml","runtime_seconds":0.316267348,"progress":"443B/443B"}],"total_operations":3}}
+{"time":"2025-07-30T12:01:08.667326239+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-30T12:01:09.051861088+05:30","level":"INFO","msg":"stream: closing","id":"fghwu06r"}
+{"time":"2025-07-30T12:01:09.051899588+05:30","level":"INFO","msg":"handler: closed","stream_id":"fghwu06r"}
+{"time":"2025-07-30T12:01:09.05190898+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"fghwu06r"}
+{"time":"2025-07-30T12:01:09.051953781+05:30","level":"INFO","msg":"sender: closed","stream_id":"fghwu06r"}
+{"time":"2025-07-30T12:01:09.052123586+05:30","level":"INFO","msg":"stream: closed","id":"fghwu06r"}

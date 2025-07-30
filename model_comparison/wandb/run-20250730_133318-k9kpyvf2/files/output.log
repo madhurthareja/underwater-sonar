@@ -1,0 +1,26 @@
+ERROR:retinanet.retinanet_model:Additional evaluation metrics calculation failed: x and y must have same first dimension, but have shapes (1,) and (0,)
+Traceback (most recent call last):
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 402, in evaluate
+    plt.plot(recall, f1_curve, marker='.')
+  File "/usr/lib/python3/dist-packages/matplotlib/pyplot.py", line 2757, in plot
+    return gca().plot(
+  File "/usr/lib/python3/dist-packages/matplotlib/axes/_axes.py", line 1632, in plot
+    lines = [*self._get_lines(*args, data=data, **kwargs)]
+  File "/usr/lib/python3/dist-packages/matplotlib/axes/_base.py", line 312, in __call__
+    yield from self._plot_args(this, kwargs)
+  File "/usr/lib/python3/dist-packages/matplotlib/axes/_base.py", line 498, in _plot_args
+    raise ValueError(f"x and y must have same first dimension, but "
+ValueError: x and y must have same first dimension, but have shapes (1,) and (0,)
+INFO:__main__:Saved retinanet results to /home/madhurthareja/underwater-sonar/model_comparison/results/retinanet_results.json
+✓ RETINANET completed: mAP@0.5 = 0.8488
+\n============================================================
+FINAL COMPARISON RESULTS
+============================================================
+    Model  mAP@0.5  mAP@0.5:0.95  Precision  Recall  F1-Score  Inference_Time_ms  Model_Size_MB
+RETINANET   0.8488             0     0.9163  0.7004    0.7939           202.2715       123.9105
+\nResults saved to: /home/madhurthareja/underwater-sonar/model_comparison/results/model_comparison.csv
+All results saved to: /home/madhurthareja/underwater-sonar/model_comparison/results/all_results.json
+\n🏆 BEST PERFORMING MODEL: RETINANET
+   mAP@0.5: 0.8488
+   F1-Score: 0.7939
+   Efficiency: 0.0068 mAP/MB

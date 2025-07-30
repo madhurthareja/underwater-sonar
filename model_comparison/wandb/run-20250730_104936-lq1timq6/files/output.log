@@ -1,0 +1,113 @@
+INFO:frcnn.frcnn_model:Loaded 5525 images for train split
+INFO:frcnn.frcnn_model:Loaded 1758 images for val split
+Epoch 0:   0%|                                                                                      | 0/2763 [00:09<?, ?it/s, Loss=1.8418, Cls=1.2592, BBox=0.5826]INFO:retinanet.retinanet_model:Epoch 0, Batch 0, Loss: 1.8418
+Epoch 0:   0%|▎                                                                          | 10/2763 [01:22<5:38:47,  7.38s/it, Loss=1.7285, Cls=1.1670, BBox=0.5615]INFO:retinanet.retinanet_model:Epoch 0, Batch 10, Loss: 1.7285
+Epoch 0:   1%|▌                                                                          | 20/2763 [02:38<5:49:23,  7.64s/it, Loss=1.6355, Cls=1.1772, BBox=0.4583]INFO:retinanet.retinanet_model:Epoch 0, Batch 20, Loss: 1.6355
+Traceback (most recent call last):                                                                                                                                 
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 172, in <module>
+    exit(main())
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 116, in main
+    result = run_single_model(model_name, args.data, args.results_dir, args.yolo_weights)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 58, in run_single_model
+    results = framework.evaluate_single_model(model_key)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/comparison_framework.py", line 74, in evaluate_single_model
+    return self.run_evaluation(model_name)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/comparison_framework.py", line 52, in run_evaluation
+    results = model.evaluate(data_yaml=self.data_yaml_path)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 331, in evaluate
+    self.train(data_yaml, epochs=15, batch_size=2)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 222, in train
+    loss_dict = self.model(valid_images, valid_targets)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torchvision/models/detection/retinanet.py", line 637, in forward
+    head_outputs = self.head(features)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torchvision/models/detection/retinanet.py", line 84, in forward
+    return {"cls_logits": self.classification_head(x), "bbox_regression": self.regression_head(x)}
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torchvision/models/detection/retinanet.py", line 196, in forward
+    cls_logits = self.conv(features)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 172, in <module>
+    exit(main())
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 116, in main
+    result = run_single_model(model_name, args.data, args.results_dir, args.yolo_weights)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 58, in run_single_model
+    results = framework.evaluate_single_model(model_key)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/comparison_framework.py", line 74, in evaluate_single_model
+    return self.run_evaluation(model_name)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/comparison_framework.py", line 52, in run_evaluation
+    results = model.evaluate(data_yaml=self.data_yaml_path)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 331, in evaluate
+    self.train(data_yaml, epochs=15, batch_size=2)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 222, in train
+    loss_dict = self.model(valid_images, valid_targets)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torchvision/models/detection/retinanet.py", line 637, in forward
+    head_outputs = self.head(features)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torchvision/models/detection/retinanet.py", line 84, in forward
+    return {"cls_logits": self.classification_head(x), "bbox_regression": self.regression_head(x)}
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torchvision/models/detection/retinanet.py", line 196, in forward
+    cls_logits = self.conv(features)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+KeyboardInterrupt

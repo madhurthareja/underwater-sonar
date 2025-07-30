@@ -1,0 +1,15 @@
+{"time":"2025-07-29T21:37:41.374330232+05:30","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/madhurthareja/underwater-sonar/model_comparison/wandb/run-20250729_213741-np1ywtar/logs/debug-core.log"}
+{"time":"2025-07-29T21:37:41.854423668+05:30","level":"INFO","msg":"stream: created new stream","id":"np1ywtar"}
+{"time":"2025-07-29T21:37:41.854474776+05:30","level":"INFO","msg":"stream: started","id":"np1ywtar"}
+{"time":"2025-07-29T21:37:41.854530614+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"np1ywtar"}
+{"time":"2025-07-29T21:37:41.854569076+05:30","level":"INFO","msg":"handler: started","stream_id":"np1ywtar"}
+{"time":"2025-07-29T21:37:41.854621967+05:30","level":"INFO","msg":"sender: started","stream_id":"np1ywtar"}
+{"time":"2025-07-29T21:37:42.315191981+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-29T21:37:43.078403488+05:30","level":"INFO","msg":"stream: closing","id":"np1ywtar"}
+{"time":"2025-07-29T21:37:43.078431542+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-29T21:37:43.078479912+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-29T21:37:44.505654957+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-29T21:37:45.027179596+05:30","level":"INFO","msg":"handler: closed","stream_id":"np1ywtar"}
+{"time":"2025-07-29T21:37:45.027213471+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"np1ywtar"}
+{"time":"2025-07-29T21:37:45.027261189+05:30","level":"INFO","msg":"sender: closed","stream_id":"np1ywtar"}
+{"time":"2025-07-29T21:37:45.027338376+05:30","level":"INFO","msg":"stream: closed","id":"np1ywtar"}

@@ -1,0 +1,20 @@
+{
+  "os": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-07-30T08:12:35.002130Z",
+  "args": [
+    "--models",
+    "retinanet"
+  ],
+  "program": "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py",
+  "codePath": "model_comparison/safe_run_comparison.py",
+  "git": {
+    "remote": "git@github.com:madhurthareja/underwater-sonar.git",
+    "commit": "f8eb2df66b8dd91dfdb99410423dcc70a7cef006"
+  },
+  "email": "madhurthareja1105@gmail.com",
+  "root": "/home/madhurthareja/underwater-sonar/model_comparison",
+  "host": "itachi",
+  "executable": "/usr/bin/python3",
+  "codePathLocal": "safe_run_comparison.py"
+}

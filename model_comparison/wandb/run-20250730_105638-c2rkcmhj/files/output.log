@@ -1,0 +1,35 @@
+INFO:frcnn.frcnn_model:Loaded 5525 images for train split
+INFO:frcnn.frcnn_model:Loaded 1758 images for val split
+Epoch 0:   0%|                                                                                      | 0/2763 [00:01<?, ?it/s, Loss=1.7434, Cls=1.1417, BBox=0.6017]INFO:retinanet.retinanet_model:Epoch 0, Batch 0, Loss: 1.7434
+ERROR:comparison_framework:Error evaluating RetinaNet: CUDA error: device-side assert triggered                                                                    
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 172, in <module>
+    exit(main())
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 116, in main
+    result = run_single_model(model_name, args.data, args.results_dir, args.yolo_weights)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 79, in run_single_model
+    torch.cuda.empty_cache()
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/cuda/memory.py", line 192, in empty_cache
+    torch._C._cuda_emptyCache()
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 172, in <module>
+    exit(main())
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 116, in main
+    result = run_single_model(model_name, args.data, args.results_dir, args.yolo_weights)
+  File "/home/madhurthareja/underwater-sonar/model_comparison/safe_run_comparison.py", line 79, in run_single_model
+    torch.cuda.empty_cache()
+  File "/home/madhurthareja/.local/lib/python3.10/site-packages/torch/cuda/memory.py", line 192, in empty_cache
+    torch._C._cuda_emptyCache()
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

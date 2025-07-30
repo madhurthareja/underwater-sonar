@@ -1,0 +1,1 @@
+{"batch_loss":0.6168540120124817,"learning_rate":0.01,"_step":5527,"epoch":1,"epoch_cls_loss":0.37323953633318335,"_wandb":{"runtime":3355},"_timestamp":1.7538570425487103e+09,"batch_bbox_loss":0.2882450520992279,"batch":2762,"batch_cls_loss":0.3286089599132538,"epoch_loss":0.7045961392883628,"epoch_bbox_loss":0.33135660283922763,"_runtime":3354.341450269}

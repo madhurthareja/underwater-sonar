@@ -1,0 +1,18 @@
+ERROR:retinanet.retinanet_model:Additional evaluation metrics calculation failed: operands could not be broadcast together with shapes (1422,) (75290,)
+Traceback (most recent call last):
+  File "/home/madhurthareja/underwater-sonar/model_comparison/retinanet/retinanet_model.py", line 425, in evaluate
+    precision, recall, _ = precision_recall_curve(np.array(all_true)==np.array(all_pred), all_scores)
+ValueError: operands could not be broadcast together with shapes (1422,) (75290,)
+INFO:__main__:Saved retinanet results to /home/madhurthareja/underwater-sonar/model_comparison/results/retinanet_results.json
+✓ RETINANET completed: mAP@0.5 = 0.8488
+\n============================================================
+FINAL COMPARISON RESULTS
+============================================================
+    Model  mAP@0.5  mAP@0.5:0.95  Precision  Recall  F1-Score  Inference_Time_ms  Model_Size_MB
+RETINANET   0.8488        0.6366     0.9163  0.7004    0.7939           202.5743       123.9105
+\nResults saved to: /home/madhurthareja/underwater-sonar/model_comparison/results/model_comparison.csv
+All results saved to: /home/madhurthareja/underwater-sonar/model_comparison/results/all_results.json
+\n🏆 BEST PERFORMING MODEL: RETINANET
+   mAP@0.5: 0.8488
+   F1-Score: 0.7939
+   Efficiency: 0.0068 mAP/MB

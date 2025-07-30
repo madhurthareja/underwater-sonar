@@ -1,0 +1,5 @@
+INFO:frcnn.frcnn_model:Loaded 5525 images for train split
+INFO:frcnn.frcnn_model:Loaded 1758 images for val split
+Epoch 0:   0%|                                                                                      | 0/2763 [00:09<?, ?it/s, Loss=1.7716, Cls=1.1654, BBox=0.6062]INFO:retinanet.retinanet_model:Epoch 0, Batch 0, Loss: 1.7716
+ERROR:comparison_framework:Error evaluating RetinaNet: index 11 is out of bounds for dimension 1 with size 11                                                      
+✗ RETINANET failed

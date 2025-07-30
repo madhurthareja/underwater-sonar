@@ -1,0 +1,54 @@
+COMPREHENSIVE MODEL COMPARISON REPORT
+============================================================
+
+Generated: 2025-07-30 13:54:10
+Dataset: /home/madhurthareja/underwater-sonar/dataset_clean/data_clean.yaml
+Models Compared: 4 models
+
+PERFORMANCE METRICS SUMMARY:
+----------------------------------------
+    Model  mAP@0.5  mAP@0.5:0.95  Precision  Recall  F1-Score  Inference_Time_ms  Model_Size_MB
+ AQUAYOLO   0.9704        0.5337     0.9605  0.9346    0.9474         42227.7951         5.9231
+    FRCNN   0.9667        0.6767     0.9461  0.9873    0.9663           299.2251       158.1446
+RETINANET   0.8488        0.0000     0.9163  0.7004    0.7939           202.8812       123.9105
+  YOLOV8N   0.9654        0.5335     0.9533  0.9343    0.9437         40653.0230         5.9305
+
+RANKING ANALYSIS:
+--------------------
+Best mAP@0.5: AQUAYOLO (0.9704)
+Best mAP@0.5:0.95: FRCNN (0.6767)
+Best Precision: AQUAYOLO (0.9605)
+Best Recall: FRCNN (0.9873)
+Best F1-Score: FRCNN (0.9663)
+
+OVERALL BEST PERFORMING MODEL:
+Model: AQUAYOLO
+mAP@0.5: 0.9704
+mAP@0.5:0.95: 0.5337
+Precision: 0.9605
+Recall: 0.9346
+F1-Score: 0.9474
+Model Size: 5.9 MB
+
+MODEL-SPECIFIC ANALYSIS:
+-------------------------
+
+AQUAYOLO:
+  - Strong in: Precision, Recall, mAP@0.5
+  - Performance Score: 0.9474
+  - Efficiency: 0.1638 mAP/MB
+
+FRCNN:
+  - Strong in: Precision, Recall, mAP@0.5
+  - Performance Score: 0.9663
+  - Efficiency: 0.0061 mAP/MB
+
+RETINANET:
+  - Strong in: None identified
+  - Performance Score: 0.7939
+  - Efficiency: 0.0068 mAP/MB
+
+YOLOV8N:
+  - Strong in: Precision, Recall, mAP@0.5
+  - Performance Score: 0.9437
+  - Efficiency: 0.1628 mAP/MB
